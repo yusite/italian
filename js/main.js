@@ -20,20 +20,11 @@
     }
   });
 
-  $(function() {
-    $("a[href*=#]:not([href=#])").click(function() {
-      var target;
-      if (location.pathname.replace(/^\//, "") === this.pathname.replace(/^\//, "") && location.hostname === this.hostname) {
-        target = $(this.hash);
-        target = (target.length ? target : $("[name=" + this.hash.slice(1) + "]"));
-        if (target.length) {
-          $("html,body").animate({
-            scrollTop: target.offset().top
-          }, 800);
-          return false;
-        }
-      }
-    });
+  smoothScroll.init({
+    speed: 1000,
+    easing: "easeInOutCubic",
+    updateURL: false,
+    offset: 0
   });
 
 }).call(this);
