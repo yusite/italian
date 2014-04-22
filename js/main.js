@@ -1,7 +1,9 @@
 (function() {
   var $popover;
 
-  skrollr.init();
+  if (!/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent || navigator.vendor || window.opera)) {
+    skrollr.init();
+  }
 
   $popover = $("[data-toggle=popover]").popover({
     html: true,
