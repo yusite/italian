@@ -37,4 +37,8 @@
     offset: 0
   });
 
+  $("[data-toggle=offcanvas]").click(function() {
+    $(".row-offcanvas").toggleClass("active");
+  });
+
 }).call(this);
