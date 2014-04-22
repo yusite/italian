@@ -20,6 +20,16 @@
     }
   });
 
+  if (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent || navigator.vendor || window.opera)) {
+    $("body").on("click", function(e) {
+      $("[data-toggle=\"popover\"]").each(function() {
+        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $(".popover").has(e.target).length === 0) {
+          $(this).popover("hide");
+        }
+      });
+    });
+  }
+
   smoothScroll.init({
     speed: 1000,
     easing: "easeInOutCubic",
