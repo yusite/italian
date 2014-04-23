@@ -1,54 +1,229 @@
 /*
- * Style tweaks
+ * Style my header
  * --------------------------------------------------
  */
-html,
-body {
-  overflow-x: hidden; /* Prevent scroll on narrow devices */
+.yzj-header {
+  height: 35em;
+  padding-top: 12em;
+  margin-bottom: 2em;
+  background-image: url("../img/headerbg.jpg");
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1)
+}
+
+.yzj-header h1 {
+  font-size: 4em;
+  margin-bottom: 1em;
+}
+
+.yzj-header a {
+  color: white;
+}
+
+/*
+ * Style nav bar
+ * --------------------------------------------------
+ */
+.navbar-fixed-top {
+  position: absolute;
+}
+
+/*
+ * Style my custom button
+ * --------------------------------------------------
+ */
+.yzj-btn.btn-lg {
+  display: block;
+  margin: auto;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.yzj-btn.btn-lg {
+  -webkit-box-shadow: inset 0px -3px 1px rgba(0, 0, 0, 0.45), 0px 2px 2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0px -3px 1px rgba(0, 0, 0, 0.45), 0px 2px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0px -3px 1px rgba(0, 0, 0, 0.45), 0px 2px 2px rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.yzj-btn.btn-default,
+.yzj-btn.btn-default:hover,
+.yzj-btn.btn-default:focus,
+.yzj-btn.btn-default:active {
+  border-color: transparent;
+}
+
+/*
+ * Style popover
+ * --------------------------------------------------
+ */
+.popover-content {
+  font-size: 1.5em
+}
+
+.popover-content a {
+  color: white;
+}
+
+.popover-content a:hover {
+  text-decoration: none;
+}
+
+/*
+ * Default fonts
+ * --------------------------------------------------
+ */
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","STHeiti","Microsoft YaHei","WenQuanYi Micro Hei",SimSun,sans-serif;
+}
+
+/*
+ * Tring to solve BS3 Modal bug
+ * --------------------------------------------------
+ */
+.modal {
+  position: fixed;
+  top: 3%;
+  right: 3%;
+  left: 3%;
+  width: auto;
+  margin: 0;
+}
+
+.modal-body {
+  height: 60%;
+  max-height: 350px;
+  padding: 15px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal-content {
+  border-radius: 6px;
+}
+
+/*
+ * Fade in effect
+ * --------------------------------------------------
+ */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+ 
+.fade-in {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+ 
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+ 
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+ 
+.fade-in.one {
+    -webkit-animation-delay: 0.7s;
+    -moz-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
+ 
+.fade-in.two {
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay:1.2s;
+    animation-delay: 1.2s;
+}
+ 
+.fade-in.three {
+    -webkit-animation-delay: 1.6s;
+    -moz-animation-delay: 1.6s;
+    animation-delay: 1.6s;
 }
 
 /*
  * Off Canvas
  * --------------------------------------------------
  */
-@media screen and (max-width: 767px) {
-  .row-offcanvas {
-    position: relative;
-    -webkit-transition: all .25s ease-out;
-       -moz-transition: all .25s ease-out;
-            transition: all .25s ease-out;
-  }
-
-  .row-offcanvas-right {
-    right: 0;
-  }
-
-  .row-offcanvas-left {
-    left: 0;
-  }
-
-  .row-offcanvas-right
-  .sidebar-offcanvas {
-    right: -50%; /* 6 columns */
-  }
-
-  .row-offcanvas-left
-  .sidebar-offcanvas {
-    left: -50%; /* 6 columns */
-  }
-
-  .row-offcanvas-right.active {
-    right: 50%; /* 6 columns */
-  }
-
-  .row-offcanvas-left.active {
-    left: 50%; /* 6 columns */
-  }
-
-  .sidebar-offcanvas {
-    position: absolute;
-    top: 0;
-    width: 50%; /* 6 columns */
-  }
+.menu-sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 15em;
+  right: -15em;
+  height: 100%;
+  z-index: 999;
+  padding-top: 10px;
+  background: url("../img/bg-sidebar.jpg");
+  text-align: center;
 }
-.yzj-header{height:35em;padding-top:10em;margin-bottom:2em;background-image:url("../img/headerbg.jpg");background-size:cover;color:#fff;text-align:center;}.yzj-header h1{font-size:4em;margin-bottom:1em;text-shadow:0 4px 3px rgba(0,0,0,0.4),0 8px 13px rgba(0,0,0,0.1),0 18px 23px rgba(0,0,0,0.1)}.yzj-header h3{text-shadow:0 4px 3px rgba(0,0,0,0.4),0 8px 13px rgba(0,0,0,0.1),0 18px 23px rgba(0,0,0,0.1)}.yzj-header a{color:#fff}.navbar-default{position:absolute;background-color:transparent}.navbar-default .navbar-nav li a:hover{background-color:transparent}.navbar-default .navbar-nav li.active a{background-color:transparent;}.navbar-default .navbar-nav li.active a:hover{background-color:transparent}.yzj-btn.btn-lg{display:block;margin:auto;width:100%;padding-left:0;padding-right:0;-webkit-box-shadow:inset 0 -3px 1px rgba(0,0,0,0.45),0 2px 2px rgba(0,0,0,0.15);-moz-box-shadow:inset 0 -3px 1px rgba(0,0,0,0.45),0 2px 2px rgba(0,0,0,0.15);box-shadow:inset 0 -3px 1px rgba(0,0,0,0.45),0 2px 2px rgba(0,0,0,0.15);-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}.yzj-btn.btn-lg.btn-default{border-color:transparent;}.yzj-btn.btn-lg.btn-default:hover{border-color:transparent}.yzj-btn.btn-lg.btn-default:forcus{border-color:transparent}.yzj-btn.btn-lg.btn-default:active{border-color:transparent}.popover-content{font-size:1.5em;}.popover-content a{color:#fff;}.popover-content a:hover{text-decoration:none}body{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","STHeiti","Microsoft YaHei","WenQuanYi Micro Hei",SimSun,sans-serif}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","STHeiti","Microsoft YaHei","WenQuanYi Micro Hei",SimSun,sans-serif}.modal{position:fixed;top:3%;right:3%;left:3%;width:auto;margin:0}.modal-body{height:60%}.modal-body{max-height:350px;padding:15px;overflow-y:auto;-webkit-overflow-scrolling:touch}.modal-content{border-radius:6px}@-webkit-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@-moz-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}.fade-in{opacity:0;-webkit-animation:fadeIn ease-in 1;-moz-animation:fadeIn ease-in 1;animation:fadeIn ease-in 1;-webkit-animation-fill-mode:forwards;-moz-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-animation-duration:1s;-moz-animation-duration:1s;animation-duration:1s}.fade-in.one{-webkit-animation-delay:.7s;-moz-animation-delay:.7s;animation-delay:.7s}.fade-in.two{-webkit-animation-delay:1.2s;-moz-animation-delay:1.2s;animation-delay:1.2s}.fade-in.three{-webkit-animation-delay:1.6s;-moz-animation-delay:1.6s;animation-delay:1.6s}@-moz-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@-webkit-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@-o-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@-ms-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+
+.menu-sidebar.active {
+  border-left: 1px solid #333;
+}
+
+.menu-link {
+  position: absolute;
+  top: 10px;
+  left: -6em;
+}
+
+#sidebar .btn {
+  padding: 6px 8px 6px 8px;
+  border-radius: 3px;
+  background:rgba(0,0,0,0.2);
+  color:white;
+  font-size: 1em;
+  border-color:transparent;
+}
+
+#sidebar span.title {
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  display: block;
+  width: 100%;
+  text-shadow: 0 1px 1px #000;
+}
+
+#sidebar li a {
+  font-size: 1em;
+  color: hsl(80, 70%, 55%);
+  text-shadow: 0 1px 1px #000;
+}
+
+#sidebar li a:hover, #sidebar li a:focus {
+/* IE10 Consumer Preview */ 
+background-image: -ms-linear-gradient(top, #E0E0E0 0%, #8F8F8F 100%);
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #E0E0E0 0%, #8F8F8F 100%);
+/* Opera */ 
+background-image: -o-linear-gradient(top, #E0E0E0 0%, #8F8F8F 100%);
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E0E0E0), color-stop(1, #8F8F8F));
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #E0E0E0 0%, #8F8F8F 100%);
+/* W3C Markup, IE10 Release Preview */ 
+background-image: linear-gradient(to bottom, #E0E0E0 0%, #8F8F8F 100%);
+color: white;
+}
+
+.off-canvas {
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+}
+
+.off-canvas.active {
+  right: 0;
+}

@@ -20,7 +20,11 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Nav Bar
+        <!-- Skrollr-body
+==================================================== -->
+<div id="skrollr-body">
+
+<!-- Nav Bar
 ==================================================== -->
 <div class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -47,27 +51,54 @@
       </ul>
     </div>
 
-  </div>
+  </div><!-- container -->
+</div><!-- navbar -->
+
+<!-- Side MENU!!!!
+==================================================== -->
+<div id="sidebar" class="menu-sidebar hidden-print off-canvas" role="complementary" data-0="opacity: 0" data-400="opacity: 0" data-500="opacity: 1">
+  <a role="button" href="#sidebar" class="btn btn-default menu-link menu-toggle">
+    MENU <span class="glyphicon glyphicon-th-list"></span>
+  </a>
+  <ul class="nav">
+    <span class="title">Content</span>
+    
+      <li>
+        <a data-scroll class="menu-toggle" href="#One">
+          <span class="glyphicon glyphicon-bookmark"></span>&nbsp;
+          Day One
+        </a>
+      </li>
+    
+      <li>
+        <a data-scroll class="menu-toggle" href="#Two">
+          <span class="glyphicon glyphicon-bookmark"></span>&nbsp;
+          Day Two
+        </a>
+      </li>
+    
+  </ul>
 </div>
 
 <!-- my header
 ==================================================== -->
-<div id="skrollr-body">
-
 <div class="yzj-header" id="content">
   <div class="container" data-0="opacity: 1" data-100="opacity: 0">
     <h1 class="fade-in one">Words to Remember</h1>
-    <h3 class="fade-in two"><a data-scroll href="#startHere"><span class="glyphicon glyphicon-circle-arrow-down"></span></a></h3>
+    <h3 class="fade-in two">
+      <a data-scroll href="#startHere">
+        <span class="glyphicon glyphicon-circle-arrow-down"></span>
+      </a>
+    </h3>
   </div>
 </div>
 
+<!-- main content
+==================================================== -->
 <div class="container">
-  <div class="row row-offcanvas row-offcanvas-right">
 
-    <div class="col-xs-12 col-sm-9" id="startHere">
-      <p class="pull-right visible-xs">
-        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-      </p>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12" id="startHere">
       <h1 id="overview" class="page-header">Overview</h1>
 <p class="lead">每天背一些单词！</p>
 <h3 id="One">Day One</h3>
@@ -595,26 +626,21 @@
 
 </div>
     </div><!-- col-xs-12 col-sm-9 -->
-
-    <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-      <div class="list-group">
-        
-          <a data-scroll href="#One" class="list-group-item">Day One</a>
-        
-          <a data-scroll href="#Two" class="list-group-item">Day Two</a>
-        
-      </div>
-    </div><!-- col-xs-6 col-sm-3 -->
-
   </div><!--/row-->
+
 <hr>
+
 <footer>
   <p>© YU Zijie 2014</p>
 </footer>
-</div>
 
-</div>
+</div><!-- container -->
+<!-- End of main content
+==================================================== -->
+</div><!-- skrollr-body -->
 
+<!-- Bootstrap Modal
+==================================================== -->
 
 
 <div class="modal fade" id="vento" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -635,8 +661,7 @@
 
 
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="/js/vendor/jquery-1.11.0.min.js"></script>
         <script src="/js/vendor/bootstrap.min.js"></script>
         <script src="/js/vendor/skrollr.min.js"></script>
         <script src="/js/vendor/smooth-scroll.js"></script>
