@@ -38,11 +38,13 @@
   });
 
   $(".menu-toggle").click(function() {
-    var offset;
-    offset = $(this).offset();
-    if (offset.top >= 538) {
-      $(".off-canvas").toggleClass("active");
-    }
+    $(".off-canvas").toggleClass("active");
+  });
+
+  $("#sidebar .btn").hide();
+
+  $(".main-content").waypoint(function() {
+    $("#sidebar .btn").fadeToggle();
   });
 
 }).call(this);
