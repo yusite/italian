@@ -168,7 +168,7 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .menu-link {
   position: absolute;
-  top: 85%;
+  top: 90%;
   left: -6em;
 }
 
@@ -247,7 +247,7 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   -webkit-transition: all 0.1s;
 }
 
-#sidebar .btn:hover {
+#sidebar .btn:active {
   transform: translate(0px,2px);
   -webkit-transform: translate(0px,2px);
   -webkit-box-shadow:0 2px 3px rgba(0,0,0,.3);
