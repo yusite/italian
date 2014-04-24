@@ -222,9 +222,9 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
        -ms-transform: translate(0px, 0px);
         -o-transform: translate(0px, 0px);
            transform: translate(0px, 0px);
-  -webkit-transition: all .25s ease-out;
-     -moz-transition: all .25s ease-out;
-          transition: all .25s ease-out;
+  -webkit-transition: all .1s linear;
+     -moz-transition: all .1s linear;
+          transition: all .1s linear;
 }
 
 .menu-sidebar.off-canvas.active,
