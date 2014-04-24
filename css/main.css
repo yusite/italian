@@ -162,19 +162,26 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   right: -15em;
   height: 100%;
   z-index: 999;
-  padding-top: 10px;
   background: url("../img/bg-sidebar.jpg");
   text-align: center;
-}
-
-.menu-sidebar.active {
-  border-left: 1px solid #333;
 }
 
 .menu-link {
   position: absolute;
   top: 10px;
   left: -6em;
+}
+
+.sidebar-shadow {
+  display: block;
+  background-color: white;
+  width: 0.5em;
+  height: 100%;
+  float: left;
+  margin: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 10px 0 8px -2px #111;
 }
 
 #sidebar .btn {
@@ -194,6 +201,8 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   display: block;
   width: 100%;
   text-shadow: 0 1px 1px #000;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #sidebar li a {
@@ -203,27 +212,26 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 #sidebar li a:hover, #sidebar li a:focus {
-/* IE10 Consumer Preview */ 
-background-image: -ms-linear-gradient(top, #E0E0E0 0%, #8F8F8F 100%);
-/* Mozilla Firefox */ 
-background-image: -moz-linear-gradient(top, #E0E0E0 0%, #8F8F8F 100%);
-/* Opera */ 
-background-image: -o-linear-gradient(top, #E0E0E0 0%, #8F8F8F 100%);
-/* Webkit (Safari/Chrome 10) */ 
-background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E0E0E0), color-stop(1, #8F8F8F));
-/* Webkit (Chrome 11+) */ 
-background-image: -webkit-linear-gradient(top, #E0E0E0 0%, #8F8F8F 100%);
-/* W3C Markup, IE10 Release Preview */ 
-background-image: linear-gradient(to bottom, #E0E0E0 0%, #8F8F8F 100%);
-color: white;
+  background: transparent;
+  color: white;
 }
 
 .off-canvas {
+   -webkit-transform: translate(0px, 0px);
+      -moz-transform: translate(0px, 0px);
+       -ms-transform: translate(0px, 0px);
+        -o-transform: translate(0px, 0px);
+           transform: translate(0px, 0px);
   -webkit-transition: all .25s ease-out;
      -moz-transition: all .25s ease-out;
           transition: all .25s ease-out;
 }
 
-.off-canvas.active {
-  right: 0;
+.menu-sidebar.off-canvas.active,
+.main-content.off-canvas.active {
+  -webkit-transform: translate(-15em, 0px);
+     -moz-transform: translate(-15em, 0px);
+      -ms-transform: translate(-15em, 0px);
+       -o-transform: translate(-15em, 0px);
+          transform: translate(-15em, 0px);
 }

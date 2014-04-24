@@ -38,7 +38,11 @@
   });
 
   $(".menu-toggle").click(function() {
-    $(".off-canvas").toggleClass("active");
+    var offset;
+    offset = $(this).offset();
+    if (offset.top >= 538) {
+      $(".off-canvas").toggleClass("active");
+    }
   });
 
 }).call(this);
